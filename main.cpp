@@ -11,21 +11,16 @@ int main(){
     string dest1 = "Bourg-Palette";
     string dest2 = "Hyrule"; 
     string choix;
-    string arriv;
 
-    cout << "Où voulez-vous aller ? 1: " << dest1 << " ou 2: " << dest2  << " ?"<< endl;
+    cout << "Où voulez-vous aller ?  " << dest1 << " ou  " << dest2  << " ?"<< endl;
     cin >> choix;
-
-    switch(stoi(choix)){
-            case 1:
-                arriv = dest1;
-                break;
-            case 2:
-                arriv = dest2; 
-                break;
+    while(choix != dest1 && choix != dest2){
+            cout << "Choisir parmi  " << dest1 << " ou  " << dest2  << "."<< endl;
+            cin >> choix;
     }
 
-    cout << "Vous avez atteint " << arriv << ". Bon séjour !" << endl; 
+  
+    cout << "Vous avez atteint " << choix << ". Bon séjour !" << endl; 
 
     return 0; 
 }
